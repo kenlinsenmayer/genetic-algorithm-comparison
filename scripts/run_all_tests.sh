@@ -184,6 +184,15 @@ else
     echo -e "${RED}✗ Swift compiler not found${NC}"
     echo "swift,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR" >> "$OUTPUT_FILE"
 fi
+
+# Elixir
+echo -e "${YELLOW}=== Running Elixir GA ===${NC}"
+if command -v elixir &> /dev/null; then
+    run_language_test "Elixir" "implementations/elixir" "elixir -r onemax_ga.ex -e \"OneMaxGA.run_tests(25)\""
+else
+    echo -e "${RED}✗ Elixir not found${NC}"
+    echo "elixir,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR" >> "$OUTPUT_FILE"
+fi
 cd - > /dev/null
 
 echo

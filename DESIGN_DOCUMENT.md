@@ -14,6 +14,7 @@ This project implements and benchmarks a simple genetic algorithm solving the On
 6. **C#** - Object-oriented .NET language
 7. **TypeScript** - Typed JavaScript superset
 8. **Swift** - Apple's systems programming language
+9. **Elixir** - Functional concurrent language on BEAM VM (added during project)
 
 ## The One-Max Problem
 
@@ -317,10 +318,15 @@ swiftc -O -whole-module-optimization -cross-module-optimization -o RunTests OneM
 ```
 Result: Improved peak performance from 12.56ms to 10.99ms minimum time.
 
-**PyPy Addition**: Added PyPy as an alternative Python runtime:
+**PyPy Addition**: Added PyPy as alternative Python runtime:
 - Created Python 2.7 compatible version without type annotations
-- PyPy performance: 4.77ms (3.9x faster than CPython's 18.81ms)
+- PyPy performance: 4.85ms (3.8x faster than CPython's 18.39ms)
 - Demonstrated JIT compilation benefits for algorithmic workloads
+
+**Elixir Addition**: Added Elixir as 10th language implementation:
+- Functional concurrent language on BEAM (Erlang) VM
+- Performance: 22.44ms (shows BEAM VM overhead for CPU-intensive tasks)
+- Demonstrates how VM design affects performance characteristics
 
 **Framework Updates**: Updated .NET target frameworks from `net6.0` to `net10.0` for compatibility with available runtime.
 
@@ -334,16 +340,17 @@ Fixed multiple issues in the automated test runner:
 
 ### Final Performance Results (Post-Optimization)
 
-#### Original 8 Languages + PyPy:
-1. **Julia**: 1.98ms (JIT scientific computing baseline)
-2. **F#**: 3.76ms (functional .NET)
-3. **Java**: 4.13ms (JVM optimization)
-4. **PyPy**: 4.77ms (JIT Python) - **Added during project**
-5. **TypeScript**: 5.57ms (V8 JavaScript)
-6. **C#**: 8.62ms (.NET OOP)
-7. **Clojure**: 13.20ms (functional Lisp)
-8. **Swift**: 15.83ms (systems language)
-9. **Python**: 18.81ms (interpreted CPython)
+#### Original 8 Languages + PyPy + Elixir:
+1. **Julia**: 1.96ms (JIT scientific computing baseline)
+2. **Java**: 3.84ms (JVM optimization)
+3. **F#**: 3.90ms (functional .NET)
+4. **PyPy**: 4.85ms (JIT Python) - **Added during project**
+5. **TypeScript**: 5.56ms (V8 JavaScript)
+6. **C#**: 8.88ms (.NET OOP)
+7. **Clojure**: 12.46ms (functional Lisp)
+8. **Swift**: 15.25ms (systems language)
+9. **Python**: 18.39ms (interpreted CPython)
+10. **Elixir**: 22.44ms (functional concurrent BEAM VM) - **Added during project**
 
 ### Lessons Learned
 

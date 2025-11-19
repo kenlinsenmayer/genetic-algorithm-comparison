@@ -13,6 +13,7 @@ A comprehensive benchmark comparing the execution speed and implementation chara
 - **C#** - Object-oriented .NET language
 - **TypeScript** - Typed JavaScript superset
 - **Swift** - Apple's systems programming language
+- **Elixir** - Functional concurrent language on BEAM VM (added during project)
 
 ## The One-Max Problem
 
@@ -41,7 +42,8 @@ GATests/
 │   ├── clojure/
 │   ├── csharp/
 │   ├── typescript/
-│   └── swift/
+│   ├── swift/
+│   └── elixir/
 ├── scripts/
 │   ├── run_all_tests.sh       # Master test runner
 │   └── analyze_results.py     # Results analysis and plotting
@@ -82,20 +84,22 @@ After implementing algorithmic consistency fixes and optimizations, here are the
 
 | Rank | Language   | Mean Time | Relative Speed | Notes |
 |------|------------|-----------|----------------|--------|
-| 1    | Julia      | 1.98 ms   | 1.00x         | JIT scientific computing |
-| 2    | F#         | 3.76 ms   | 1.90x         | Functional .NET |
-| 3    | Java       | 4.13 ms   | 2.08x         | JVM optimization |
-| 4    | PyPy       | 4.77 ms   | 2.41x         | JIT Python |
-| 5    | TypeScript | 5.57 ms   | 2.81x         | V8 JavaScript |
-| 6    | C#         | 8.62 ms   | 4.35x         | .NET OOP |
-| 7    | Clojure    | 13.20 ms  | 6.67x         | Functional Lisp |
-| 8    | Swift      | 15.83 ms  | 8.00x         | Systems language |
-| 9    | Python     | 18.81 ms  | 9.50x         | Interpreted CPython |
+| 1    | Julia      | 1.96 ms   | 1.00x         | JIT scientific computing |
+| 2    | Java       | 3.84 ms   | 1.96x         | JVM optimization |
+| 3    | F#         | 3.90 ms   | 1.99x         | Functional .NET |
+| 4    | PyPy       | 4.85 ms   | 2.47x         | JIT Python |
+| 5    | TypeScript | 5.56 ms   | 2.83x         | V8 JavaScript |
+| 6    | C#         | 8.88 ms   | 4.52x         | .NET OOP |
+| 7    | Clojure    | 12.46 ms  | 6.35x         | Functional Lisp |
+| 8    | Swift      | 15.25 ms  | 7.77x         | Systems language |
+| 9    | Python     | 18.39 ms  | 9.36x         | Interpreted CPython |
+| 10   | Elixir     | 22.44 ms  | 11.43x        | Functional concurrent (BEAM VM) |
 
 **Key Insights:**
 - **Julia leads** with excellent JIT optimization for numerical computing
 - **Compiled languages** (F#, Java) show strong performance
-- **PyPy dramatically improves Python** by 3.9x over CPython
+- **PyPy dramatically improves Python** by 3.8x over CPython
+- **Elixir shows BEAM VM overhead** for CPU-intensive tasks vs concurrent workloads
 - **Algorithmic consistency** was crucial for fair comparison
 - **Runtime choice matters** as much as language choice
 
