@@ -1,0 +1,17 @@
+{
+  "name": "onemax-ga-typescript",
+  "version": "1.0.0",
+  "description": "One-Max Genetic Algorithm in TypeScript",
+  "main": "run_tests.js",
+  "scripts": {
+    "build": "tsc --target ES2020 *.ts",
+    "test": "node run_tests.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "undici-types": "^7.16.0"
+  }
+}

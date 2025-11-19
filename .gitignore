@@ -1,0 +1,78 @@
+# Compiled binaries and build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+*.jar
+RunTests
+RunTestsOptimized
+RunTestsMax
+
+# Language-specific build directories
+**/bin/
+**/obj/
+**/build/
+**/target/
+**/.build/
+
+# Node.js
+**/node_modules/
+**/package-lock.json
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.Python
+**/env/
+**/venv/
+**/.venv/
+
+# Julia
+**/.julia/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Compiled TypeScript
+**/*.js
+**/*.js.map
+!**/run_tests.js
+
+# Swift
+**/.build/
+**/Package.resolved
+
+# F#/C# specific
+**/packages/
+**/*.user
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
+
+# JVM
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+
+# Clojure
+**/target/
+**/.lein-*
+**/.nrepl-port
