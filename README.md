@@ -1,6 +1,7 @@
 # Genetic Algorithm Performance Comparison
 
 A comprehensive benchmark comparing the execution speed and implementation characteristics of a genetic algorithm solving the One-Max problem across 8 different programming languages.
+Note: This project and code were created using AI tools (Sonnet 4) as an experiment in AI code generation. Although the code runs I'm sure they could all be better optimized.
 
 ## Languages Tested
 
