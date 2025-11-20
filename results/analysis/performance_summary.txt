@@ -2,116 +2,124 @@ GENETIC ALGORITHM PERFORMANCE COMPARISON SUMMARY
 ============================================================
 
 OVERVIEW:
-• Languages tested: 11
+• Languages tested: 12
 • Runs per language: 25 (target)
 • Algorithm: One-Max Problem Genetic Algorithm
 • Problem size: 100-bit binary strings
 
 PERFORMANCE RANKING (by mean execution time):
 --------------------------------------------------
- 1. julia            1.96 ms  ( 1.00x) ✓
- 2. java             3.84 ms  ( 1.96x) ✓
- 3. fsharp           3.90 ms  ( 1.99x) ✓
- 4. pypy             4.85 ms  ( 2.47x) ✓
- 5. typescript       5.56 ms  ( 2.83x) ✓
- 6. csharp           8.88 ms  ( 4.52x) ✓
- 7. clojure         12.46 ms  ( 6.35x) ✓
- 8. swift           15.25 ms  ( 7.77x) ✓
- 9. python          18.39 ms  ( 9.36x) ✓
-10. elixir          22.44 ms  (11.43x) ✓
-11. elixir          23.00 ms  (11.71x) ✓
+ 1. julia            2.01 ms  ( 1.00x) ✓
+ 2. go               3.62 ms  ( 1.80x) ✓
+ 3. java             3.67 ms  ( 1.83x) ✓
+ 4. fsharp           3.87 ms  ( 1.93x) ✓
+ 5. pypy             4.68 ms  ( 2.33x) ✓
+ 6. typescript       5.49 ms  ( 2.73x) ✓
+ 7. csharp           9.00 ms  ( 4.48x) ✓
+ 8. clojure         12.43 ms  ( 6.18x) ✓
+ 9. swift           14.84 ms  ( 7.39x) ✓
+10. python          19.17 ms  ( 9.54x) ✓
+11. elixir          21.84 ms  (10.87x) ✓
+12. elixir          22.72 ms  (11.31x) ✓
 
 STATISTICAL INSIGHTS:
 ------------------------------
-• Fastest: julia (1.96 ms)
-• Slowest: elixir (23.00 ms)
-• Speed difference: 11.71x
+• Fastest: julia (2.01 ms)
+• Slowest: elixir (22.72 ms)
+• Speed difference: 11.31x
 
-• Most consistent: python (CV: 8.94%)
-• Least consistent: julia (CV: 329.86%)
+• Most consistent: elixir (CV: 9.50%)
+• Least consistent: julia (CV: 319.44%)
 
 LANGUAGE PARADIGM ANALYSIS:
 -----------------------------------
-• Compiled Systems: 9.32 ms average
-• Functional: 8.18 ms average
-• Scientific/Dynamic: 10.18 ms average
-• Web/Scripting: 5.56 ms average
+• Compiled Systems: 9.17 ms average
+• Functional: 8.15 ms average
+• Scientific/Dynamic: 10.59 ms average
+• Web/Scripting: 5.49 ms average
 
 DETAILED STATISTICS:
 -------------------------
 JULIA:
-  Mean:     1.96 ms
-  Std:      6.48 ms
-  95% CI: [ -0.71,   4.64] ms
-  Range: [  0.46,  33.01] ms
+  Mean:     2.01 ms
+  Std:      6.42 ms
+  95% CI: [ -0.64,   4.66] ms
+  Range: [  0.56,  32.77] ms
+  Runs: 25/25
+
+GO:
+  Mean:     3.62 ms
+  Std:      0.86 ms
+  95% CI: [  3.27,   3.98] ms
+  Range: [  2.90,   6.58] ms
   Runs: 25/25
 
 JAVA:
-  Mean:     3.84 ms
-  Std:      0.56 ms
-  95% CI: [  3.61,   4.07] ms
-  Range: [  2.84,   5.38] ms
+  Mean:     3.67 ms
+  Std:      0.63 ms
+  95% CI: [  3.41,   3.93] ms
+  Range: [  3.10,   6.24] ms
   Runs: 25/25
 
 FSHARP:
-  Mean:     3.90 ms
-  Std:      1.79 ms
-  95% CI: [  3.16,   4.64] ms
-  Range: [  2.79,  11.02] ms
+  Mean:     3.87 ms
+  Std:      1.70 ms
+  95% CI: [  3.17,   4.57] ms
+  Range: [  2.85,  10.70] ms
   Runs: 25/25
 
 PYPY:
-  Mean:     4.85 ms
-  Std:      4.06 ms
-  95% CI: [  3.17,   6.52] ms
-  Range: [  3.30,  23.97] ms
+  Mean:     4.68 ms
+  Std:      3.73 ms
+  95% CI: [  3.14,   6.22] ms
+  Range: [  2.98,  22.15] ms
   Runs: 25/25
 
 TYPESCRIPT:
-  Mean:     5.56 ms
-  Std:      1.48 ms
-  95% CI: [  4.95,   6.17] ms
-  Range: [  3.89,   9.58] ms
+  Mean:     5.49 ms
+  Std:      1.88 ms
+  95% CI: [  4.71,   6.26] ms
+  Range: [  3.74,  11.50] ms
   Runs: 25/25
 
 CSHARP:
-  Mean:     8.88 ms
-  Std:      3.02 ms
-  95% CI: [  7.63,  10.13] ms
-  Range: [  6.73,  20.65] ms
+  Mean:     9.00 ms
+  Std:      2.55 ms
+  95% CI: [  7.95,  10.05] ms
+  Range: [  6.75,  17.52] ms
   Runs: 25/25
 
 CLOJURE:
-  Mean:    12.46 ms
-  Std:      5.19 ms
-  95% CI: [ 10.32,  14.60] ms
-  Range: [  7.74,  34.64] ms
+  Mean:    12.43 ms
+  Std:      4.84 ms
+  95% CI: [ 10.43,  14.43] ms
+  Range: [  8.65,  31.42] ms
   Runs: 25/25
 
 SWIFT:
-  Mean:    15.25 ms
-  Std:      3.06 ms
-  95% CI: [ 13.99,  16.51] ms
-  Range: [ 12.22,  27.08] ms
+  Mean:    14.84 ms
+  Std:      3.87 ms
+  95% CI: [ 13.25,  16.44] ms
+  Range: [ 11.08,  31.58] ms
   Runs: 25/25
 
 PYTHON:
-  Mean:    18.39 ms
-  Std:      1.64 ms
-  95% CI: [ 17.71,  19.07] ms
-  Range: [ 14.91,  21.00] ms
+  Mean:    19.17 ms
+  Std:      2.35 ms
+  95% CI: [ 18.20,  20.14] ms
+  Range: [ 16.15,  26.13] ms
   Runs: 25/25
 
 ELIXIR:
-  Mean:    22.44 ms
-  Std:      2.63 ms
-  95% CI: [ 21.35,  23.53] ms
-  Range: [ 17.00,  29.00] ms
+  Mean:    21.84 ms
+  Std:      2.08 ms
+  95% CI: [ 20.98,  22.70] ms
+  Range: [ 18.00,  27.00] ms
   Runs: 25/25
 
 ELIXIR:
-  Mean:    23.00 ms
-  Std:      2.52 ms
-  95% CI: [ 21.96,  24.04] ms
-  Range: [ 20.00,  29.00] ms
+  Mean:    22.72 ms
+  Std:      2.69 ms
+  95% CI: [ 21.61,  23.83] ms
+  Range: [ 17.00,  28.00] ms
   Runs: 25/25

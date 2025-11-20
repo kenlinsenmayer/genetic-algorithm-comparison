@@ -15,6 +15,7 @@ Note: This project and code were created using AI tools (Sonnet 4) as an experim
 - **TypeScript** - Typed JavaScript superset
 - **Swift** - Apple's systems programming language
 - **Elixir** - Functional concurrent language on BEAM VM (added during project)
+- **Go** - Systems programming language with garbage collection (added during project)
 
 ## The One-Max Problem
 
@@ -44,7 +45,8 @@ GATests/
 │   ├── csharp/
 │   ├── typescript/
 │   ├── swift/
-│   └── elixir/
+│   ├── elixir/
+│   └── go/
 ├── scripts/
 │   ├── run_all_tests.sh       # Master test runner
 │   └── analyze_results.py     # Results analysis and plotting
@@ -85,16 +87,17 @@ After implementing algorithmic consistency fixes and optimizations, here are the
 
 | Rank | Language   | Mean Time | Relative Speed | Notes |
 |------|------------|-----------|----------------|--------|
-| 1    | Julia      | 1.96 ms   | 1.00x         | JIT scientific computing |
-| 2    | Java       | 3.84 ms   | 1.96x         | JVM optimization |
-| 3    | F#         | 3.90 ms   | 1.99x         | Functional .NET |
-| 4    | PyPy       | 4.85 ms   | 2.47x         | JIT Python |
-| 5    | TypeScript | 5.56 ms   | 2.83x         | V8 JavaScript |
-| 6    | C#         | 8.88 ms   | 4.52x         | .NET OOP |
-| 7    | Clojure    | 12.46 ms  | 6.35x         | Functional Lisp |
-| 8    | Swift      | 15.25 ms  | 7.77x         | Systems language |
-| 9    | Python     | 18.39 ms  | 9.36x         | Interpreted CPython |
-| 10   | Elixir     | 22.44 ms  | 11.43x        | Functional concurrent (BEAM VM) |
+| 1    | Julia      | 2.01 ms   | 1.00x         | JIT scientific computing |
+| 2    | Go         | 3.62 ms   | 1.80x         | Systems language with GC |
+| 3    | Java       | 3.67 ms   | 1.83x         | JVM optimization |
+| 4    | F#         | 3.87 ms   | 1.93x         | Functional .NET |
+| 5    | PyPy       | 4.68 ms   | 2.33x         | JIT Python |
+| 6    | TypeScript | 5.49 ms   | 2.73x         | V8 JavaScript |
+| 7    | C#         | 9.00 ms   | 4.48x         | .NET OOP |
+| 8    | Clojure    | 12.43 ms  | 6.18x         | Functional Lisp |
+| 9    | Swift      | 14.84 ms  | 7.39x         | Systems language |
+| 10   | Python     | 19.17 ms  | 9.54x         | Interpreted CPython |
+| 11   | Elixir     | 21.84 ms  | 10.87x        | Functional concurrent (BEAM VM) |
 
 **Key Insights:**
 - **Julia leads** with excellent JIT optimization for numerical computing

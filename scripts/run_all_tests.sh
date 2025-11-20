@@ -193,6 +193,15 @@ else
     echo -e "${RED}✗ Elixir not found${NC}"
     echo "elixir,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR" >> "$OUTPUT_FILE"
 fi
+
+# Go
+echo -e "${YELLOW}=== Running Go GA ===${NC}"
+if command -v go &> /dev/null; then
+    run_language_test "Go" "implementations/go" "go run onemax_ga.go"
+else
+    echo -e "${RED}✗ Go compiler not found${NC}"
+    echo "go,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR,ERROR" >> "$OUTPUT_FILE"
+fi
 cd - > /dev/null
 
 echo
