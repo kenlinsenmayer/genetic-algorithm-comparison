@@ -4,12 +4,13 @@
 
 Lines of code counted using automated script `count_loc.py` which:
 - Excludes blank lines and whitespace-only lines
-- Excludes all comment styles (`//`, `/* */`, `#`, `;;`, `(* *)`)
-- Excludes documentation strings and blocks (`"""`, `@doc`, etc.)
-- Counts only executable code lines
-- Provides reproducible, language-aware parsing
+- Excludes all comment styles (`//`, `/* */`, `/**`, `///`, `#`, `;;`, `(* *)`)
+- Excludes documentation strings and blocks (`"""`, `@doc`, `@moduledoc`, etc.)
+- Counts only executable code lines including structural elements (`def`, `end`, `{`, `}`)
+- Provides reproducible, language-aware parsing with enhanced multiline comment handling
+- **Updated**: Fixed Elixir `@doc`/`@moduledoc` parsing and enhanced JSDoc/XML doc comment detection
 
-Run `python3 count_loc.py` to verify these counts.
+Run `python3 count_loc.py` to verify these counts. Total executable lines: **1,156**
 
 ## Language Comparison Table
 

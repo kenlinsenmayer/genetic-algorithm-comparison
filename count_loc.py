@@ -45,17 +45,19 @@ def count_executable_lines(file_path, language):
             
         # Handle multiline comments and docstrings by language
         if language in ['java', 'csharp', 'typescript', 'swift', 'go']:
-            # Handle /* ... */ style comments
-            if '/*' in stripped and '*/' in stripped:
+            # Handle /** ... */ and /* ... */ style comments
+            if ('/*' in stripped or '/**' in stripped) and '*/' in stripped:
                 # Single line multiline comment
-                before_comment = stripped.split('/*')[0].strip()
-                if before_comment and not before_comment.startswith('//'):
+                comment_start = '/**' if '/**' in stripped else '/*'
+                before_comment = stripped.split(comment_start)[0].strip()
+                if before_comment and not before_comment.startswith('//') and not before_comment.startswith('///'):
                     executable_lines += 1
                 continue
-            elif '/*' in stripped:
+            elif '/*' in stripped or '/**' in stripped:
                 in_multiline_comment = True
-                before_comment = stripped.split('/*')[0].strip()
-                if before_comment and not before_comment.startswith('//'):
+                comment_start = '/**' if '/**' in stripped else '/*'
+                before_comment = stripped.split(comment_start)[0].strip()
+                if before_comment and not before_comment.startswith('//') and not before_comment.startswith('///'):
                     executable_lines += 1
                 continue
             elif '*/' in stripped:
@@ -63,8 +65,8 @@ def count_executable_lines(file_path, language):
                 continue
             elif in_multiline_comment:
                 continue
-            # Handle // style comments
-            elif stripped.startswith('//') or stripped.startswith('*'):
+            # Handle //, ///, and * style comments (including XML doc comments)
+            elif stripped.startswith('//') or stripped.startswith('///') or stripped.startswith('*'):
                 continue
                 
         elif language in ['python', 'pypy']:
