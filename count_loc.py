@@ -128,8 +128,11 @@ def count_executable_lines(file_path, language):
             # Handle Elixir comments and documentation
             if stripped.startswith('#') or stripped.startswith('@doc') or stripped.startswith('@moduledoc'):
                 continue
-            # Handle multiline strings for documentation
-            if '"""' in stripped:
+            # Handle standalone """ lines (part of @doc/@moduledoc blocks)
+            if stripped == '"""':
+                continue
+            # Handle multiline strings for other cases
+            if '"""' in stripped and not (stripped.startswith('@doc') or stripped.startswith('@moduledoc')):
                 count = stripped.count('"""')
                 if count == 1:
                     if in_docstring:

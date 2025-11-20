@@ -25,4 +25,4 @@ Run `python3 count_loc.py` to verify these counts.
 | 8    | Clojure    | 95            | 12.43         | 6.18x         | Functional Lisp | JVM |
 | 9    | Swift      | 81            | 14.84         | 7.39x         | Systems/OOP | Native |
 | 10   | Python     | 67            | 19.17         | 9.54x         | Dynamic/Scripting | Interpreted |
-| 11   | Elixir     | 47            | 21.84         | 10.87x        | Functional/Concurrent | BEAM VM |
+| 11   | Elixir     | 112           | 21.84         | 10.87x        | Functional/Concurrent | BEAM VM |
